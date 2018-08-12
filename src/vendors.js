@@ -6,4 +6,5 @@ import Vuex from 'vuex';
 import echarts from 'echarts';
 
 
-import html2canvas from 'html2canvas';
+
+import rasterizehtml from 'rasterizehtml';

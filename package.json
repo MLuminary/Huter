@@ -1,7 +1,7 @@
 {
-  "name": "Huter",
+  "name": "",
   "version": "1.0.0",
-  "description": "标签",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "init": "webpack --progress --config webpack.dev.config.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MLuminary/Huter"
+    "url": ""
   },
   "author": "",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "vue-router": "^3.0.1",
     "vuex": "^2.2.1",
     "echarts": "^3.4.0",
-    "html2canvas": "^0.5.0-beta4"
+    "rasterizehtml": "^1.2.4"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
@@ -33,8 +33,8 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-runtime": "^6.11.6",
     "css-loader": "^0.28.7",
-    "eslint": "^3.12.2",
-    "eslint-plugin-html": "^1.7.0",
+    "eslint": "^4.13.1",
+    "eslint-plugin-html": "^4.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "html-loader": "^0.5.1",

@@ -1,2 +1,0 @@
-# Huter
-Navigation and tools
