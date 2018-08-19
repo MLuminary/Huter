@@ -17,12 +17,12 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
+    "echarts": "^3.4.0",
     "iview": "^2.7.4",
+    "rasterizehtml": "^1.2.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuex": "^2.2.1",
-    "echarts": "^3.4.0",
-    "rasterizehtml": "^1.2.4"
+    "vuex": "^2.2.1"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
