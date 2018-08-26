@@ -18,8 +18,12 @@
   "dependencies": {
     "axios": "^0.15.3",
     "echarts": "^3.4.0",
+    "express": "^4.16.3",
+    "iconv-lite": "^0.4.24",
     "iview": "^2.7.4",
     "rasterizehtml": "^1.2.4",
+    "request": "^2.88.0",
+    "superagent": "^3.8.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^2.2.1"

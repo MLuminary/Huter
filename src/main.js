@@ -8,7 +8,6 @@ import App from './app.vue';
 import 'iview/dist/styles/iview.css';
 import '../my-theme/index.less'
 
-
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
