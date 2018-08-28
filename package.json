@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "element-ui": "^2.4.6",
     "iconv-lite": "^0.4.24",
     "request": "^2.88.0",
     "stylus": "^0.54.5",
@@ -42,6 +43,7 @@
     "cross-env": "^5.0.1",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.28.0",
+    "element-theme-chalk": "^2.4.6",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
