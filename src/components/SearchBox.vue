@@ -9,14 +9,13 @@
           :fetch-suggestions="loadSearchInfo"
           :placeholder="pickplaceHolder"
           @select="handleSelect"
-          @keyup.enter.native="doSearch"
-          :trigger-on-focus="false">
+          :trigger-on-focus="false"
+          @keyup.enter.native="doSearch(query)">
           <i
             class="el-icon-search el-input__icon"
-            slot="suffix"
-            @click="handleIconClick">
+            slot="suffix">
           </i>
-          <el-select @change="onselect" class="type-select" v-model="pickType" slot="prepend">
+          <el-select class="type-select" v-model="pickType" slot="prepend">
             <img style="width: 25px; margin-top: 7px" :src="pickIcon" slot="prefix">
             <el-option
               v-for="item in searchType"
@@ -37,7 +36,7 @@
 </template>
 
 <script>
-import {getBaiduSearchResult} from '../api/searchResult'
+import { getBaiduSearchResult } from '../api/searchResult'
 
 export default {
   name: 'SearchBox',
@@ -109,19 +108,17 @@ export default {
         callback(blackArr)
       }
     },
-    handleSelect(item) {
-      console.log(item)
-    },
-    handleIconClick(ev) {
-      console.log(ev)
-    },
-    onselect(type) {
-      console.log(type)
+    handleSelect(query) {
+      this.doSearch(query)
     },
     // 开始搜索
-    doSearch() {
+    doSearch(query) {
       if (this.pickType === 'baidu') {
-        window.open(`https://www.baidu.com/s?ie=utf-8&wd=${this.query}`)
+        window.open(`https://www.baidu.com/s?ie=utf-8&wd=${query}`)
+      } else if (this.pickType === 'google') {
+        window.open(`https://www.google.com/search?q=${query}&ie=UTF-8`)
+      } else if (this.pickType === 'biying') {
+        window.open(`https://cn.bing.com/search?q=${query}`)
       }
     }
   },
