@@ -76,7 +76,6 @@ export default {
 
 <style lang="stylus" scoped>
   .nav-container
-    background-color #3D3F41
     height 60px
     .icon-logo
       position relative

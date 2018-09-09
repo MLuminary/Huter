@@ -1,38 +1,36 @@
 <template>
-  <div>
-    <el-row type="flex" justify="center">
-      <el-col :xs="22" :sm="12">
-        <el-autocomplete
-          class="search-box"
-          popper-class="my-autocomplete"
-          v-model="query"
-          :fetch-suggestions="loadSearchInfo"
-          :placeholder="pickplaceHolder"
-          @select="handleSelect"
-          :trigger-on-focus="false"
-          @keyup.enter.native="doSearch(query)">
-          <i
-            class="el-icon-search el-input__icon"
-            slot="suffix">
-          </i>
-          <el-select class="type-select" v-model="pickType" slot="prepend">
-            <img style="width: 25px; margin-top: 7px" :src="pickIcon" slot="prefix">
-            <el-option
-              v-for="item in searchType"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value">
-              <img style="float: left; width: 20px; margin-top: 5px" :src="item.icon">
-              <span style="float: right; color: #8492a6; font-size: 13px;margin-left: 20px;">{{ item.label }}</span>
-            </el-option>
-          </el-select>
-          <template slot-scope="{ item }">
-            <div class="name">{{ item }}</div>
-          </template>
-        </el-autocomplete>
-      </el-col>
-    </el-row>
-  </div>
+  <el-row class="search-container" type="flex" justify="center">
+    <el-col :xs="22" :sm="12">
+      <el-autocomplete
+        class="search-box"
+        popper-class="my-autocomplete"
+        v-model="query"
+        :fetch-suggestions="loadSearchInfo"
+        :placeholder="pickplaceHolder"
+        @select="handleSelect"
+        :trigger-on-focus="false"
+        @keyup.enter.native="doSearch(query)">
+        <i
+          class="el-icon-search el-input__icon"
+          slot="suffix">
+        </i>
+        <el-select class="type-select" v-model="pickType" slot="prepend">
+          <img style="width: 25px; margin-top: 7px" :src="pickIcon" slot="prefix">
+          <el-option
+            v-for="item in searchType"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+            <img style="float: left; width: 20px; margin-top: 5px" :src="item.icon">
+            <span style="float: right; color: #8492a6; font-size: 13px;margin-left: 20px;">{{ item.label }}</span>
+          </el-option>
+        </el-select>
+        <template slot-scope="{ item }">
+          <div class="name">{{ item }}</div>
+        </template>
+      </el-autocomplete>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
@@ -128,19 +126,20 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .search-box
+  .search-container
     width 100%
-
-  .my-autocomplete
-    li
-      line-height normal
-      padding 7px
-      .name
-        text-overflow ellipsis
-        overflow hidden
-      .addr
-        font-size 12px
-        color #b4b4b4
-      .highlighted .addr
-        color: #ddd
+    .search-box
+      width 100%
+    .my-autocomplete
+      li
+        line-height normal
+        padding 7px
+        .name
+          text-overflow ellipsis
+          overflow hidden
+        .addr
+          font-size 12px
+          color #b4b4b4
+        .highlighted .addr
+          color: #ddd
 </style>
