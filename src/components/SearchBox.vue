@@ -130,16 +130,22 @@ export default {
     width 100%
     .search-box
       width 100%
-    .my-autocomplete
-      li
-        line-height normal
-        padding 7px
-        .name
-          text-overflow ellipsis
-          overflow hidden
-        .addr
-          font-size 12px
-          color #b4b4b4
-        .highlighted .addr
-          color: #ddd
+      .my-autocomplete
+        li
+          line-height normal
+          padding 7px
+          .name
+            text-overflow ellipsis
+            overflow hidden
+          .addr
+            font-size 12px
+            color #b4b4b4
+          .highlighted .addr
+            color: #ddd
+</style>
+
+<style>
+  .search-box .el-input__inner:focus {
+    border-color: #dcdfe6 !important
+  }
 </style>

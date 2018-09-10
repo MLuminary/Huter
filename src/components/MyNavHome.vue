@@ -3,6 +3,7 @@
     <el-main class="mid-content">
       <div class="modal"></div>
       <TopNav></TopNav>
+      <el-row class="webTitle">Huter</el-row>
       <SearchBox class="search-box"></SearchBox>
     </el-main>
     <el-main class="main-content">
@@ -102,10 +103,16 @@ export default {
       background-position 0 100%
       -webkit-animation gradient 20s ease-in-out infinite
       animation gradient 20s ease-in-out infinite
-    //   background -webkit-linear-gradient(45deg,#5a3694 0,#13bdce 33%,#0094d9 66%,#6fc7b5 100%)
-    // background linear-gradient(45deg,#dab1c5 0,#71aed8 26%,#dbe8ad 66%,#df71a1 80%, #ecc87c 100%)
-    .search-box
-        margin-top 200px
+      //   background -webkit-linear-gradient(45deg,#5a3694 0,#13bdce 33%,#0094d9 66%,#6fc7b5 100%)
+      // background linear-gradient(45deg,#dab1c5 0,#71aed8 26%,#dbe8ad 66%,#df71a1 80%, #ecc87c 100%)
+      .webTitle
+        text-align center
+        font-size: 8rem
+        font-family yxs
+        color #fff
+        margin-top 2rem
+      .search-box
+          margin-top 50px
     .main-content
       background-color rgba(0, 0, 0, 0.05)
       .hut-card-box
